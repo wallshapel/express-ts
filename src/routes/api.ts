@@ -26,6 +26,6 @@ router.put('/api/car/update/:id', carUpdate);
 router.delete('/api/car/destroy/:id', carDestroy);
 
 // Upload
-router.post('/api/upload', multerMiddleware ,uploadIndex); 
+router.post('/api/upload', sessionMiddleware, multerMiddleware ,uploadIndex); // Esta ruta pasa por dos middlewares
 
 export default router;
